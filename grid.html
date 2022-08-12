@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridin CSS</title>
+    <style>
+        .container{
+            display: grid;
+            gap: 10px;
+            /* justify-content: center; */
+            grid-template-areas: 
+            "head head head head head head"
+            "main main main sidebar sidebar sidebar"
+            "image image image Image Image Image"
+            "footer footer footer footer footer footer";
+        }
+        @media screen and (max-width: 700px) {
+            body{
+                background-color: aqua;
+            }
+
+}
+        .item{
+            padding: 50px;
+            border: 1px solid;
+        }
+        .i1{
+            background-color: rgb(201, 29, 141);
+            grid-area: head;
+        }
+        .i2{
+            background-color: rgb(114, 219, 114);
+            grid-area: main;
+            /* height: 100px; */
+        }
+        .i3{
+            background-color: rgb(219, 109, 219);
+            grid-area: sidebar;
+        }
+        .i4{
+            background-color: rgb(209, 209, 115);
+            grid-area: image;
+        }
+        .i5{
+            background-color: rgb(125, 114, 211);
+            grid-area: Image;
+        }
+        .i6{
+            background-color: rgb(82, 171, 207);
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item i1">Header</div>
+        <div class="item i2">Main Content</div>
+        <div class="item i3">SideBar</div>
+        <div class="item i4">Image1</div>
+        <div class="item i5">Image2</div>
+        <div class="item i6">Footer</div>
+    </div>
+</body>
+</html>
